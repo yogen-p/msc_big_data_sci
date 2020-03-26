@@ -1,0 +1,7 @@
+sudo docker pull cassandra:latest
+sudo docker run --name cassandra-test2 -p 9042:9042 cassandra:latest
+
+sudo docker inspect cassandra-test2
+
+sudo docker build . --tag=cassrest:v1
+sudo docker run -p 80:80 cassrest:v1
